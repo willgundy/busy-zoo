@@ -3,8 +3,9 @@ import React from 'react';
 export default function Fight({ animalOneSize, setAnimalOneSize, animalTwoSize, setAnimalTwoSize }) {
   return (
     <div className='fightContainer'>
-      <div className='animalOne'>
-        <img src='bugs.png' style={{ width: animalOneSize }}/>
+      <div className='fightCard'>
+        <h2>Bugs</h2>
+        <img src='bugsBunny.png' height={animalOneSize * 10}/>
         {animalOneSize < 20 ?
           <button variant='info' onClick={() => setAnimalOneSize(animalOneSize + 1)}>Bugs Eats Some Carrot</button>
           :
@@ -16,8 +17,10 @@ export default function Fight({ animalOneSize, setAnimalOneSize, animalTwoSize, 
           <button variant='warning' disabled>Lightin Up on Daffy</button>
         }
       </div>
-      <div className='animalTwo'>
-        <img src='daffy.png' style={{ width: animalTwoSize }}/>
+      <h2>VS</h2>
+      <div className='fightCard'>
+        <h2>Daffy</h2>
+        <img src='daffyDuck.png' height={animalTwoSize * 10 }/>
         {animalTwoSize < 20 ?
           <button variant='info' onClick={() => setAnimalTwoSize(animalTwoSize + 1)}>Daffy Gains Fame</button>
           :
