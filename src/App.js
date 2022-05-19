@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Fight from './Fight';
+import OpenSign from './OpenSign';
+import Parade from './Parade';
 
 function App() {
+  const [animalOneSize, setAnimalOneSize] = useState(10);
+  const [animalTwoSize, setAnimalTwoSize] = useState(10);
+  const [isOpen, setIsOpen] = useState(false);
+  const [animals, setAnimals] = useState([]);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        Welcome to Busy Zoo!
       </header>
+      <main>
+        <Fight 
+          animalOneSize={animalOneSize}
+          animalTwoSize={animalTwoSize}
+          setAnimalOneSize={setAnimalOneSize}
+          setAnimalTwoSize={setAnimalTwoSize}
+        />
+        <OpenSign 
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+        />
+        <Parade 
+          animals={animals}
+          setAnimals={setAnimals}
+        />
+      </main>
     </div>
   );
 }
