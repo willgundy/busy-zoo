@@ -16,3 +16,14 @@ test('when open button is click text changes to Busy Zoo is Open, when close but
   const zooClosedEl = screen.queryByText('Sorry We are Closed!');
   expect(zooClosedEl).toBeInTheDocument();
 });
+
+test('make sure each button in the parade section renders the correct animal emoji', () => {
+  render(<App />);
+  //elephant count, which should start at one and go to two after click event
+  const elephantCountBefore = screen.queryAllByText(/🐘/i);
+  expect(elephantCountBefore.length).toBe(1);
+  const elephantButton = screen.getByText(/Add Elephant/i);
+  fireEvent.click(elephantButton);
+  const elephantCountAfter = screen.queryAllByText(/🐘/i);
+  expect(elephantCountAfter.length).toBe(2);
+});
