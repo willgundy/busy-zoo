@@ -1,5 +1,6 @@
 import { useState } from 'react/cjs/react.production.min';
 import './App.css';
+import Fight from './Fight';
 
 function App() {
   const [animalOneSize, setAnimalOneSize] = useState(10);
