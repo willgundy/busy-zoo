@@ -1,4 +1,5 @@
 import React from 'react';
+import CustomButton from './CustomButton';
 
 export default function Fight({ animalOneSize, setAnimalOneSize, animalTwoSize, setAnimalTwoSize }) {
   return (
@@ -7,14 +8,14 @@ export default function Fight({ animalOneSize, setAnimalOneSize, animalTwoSize, 
         <h2>Bugs</h2>
         <img src='bugsBunny.png' height={animalOneSize * 10}/>
         {animalOneSize < 20 ?
-          <button variant='info' onClick={() => setAnimalOneSize(animalOneSize + 1)}>Bugs Eats Some Carrot</button>
+          <CustomButton variant='info' onClick={() => setAnimalOneSize(animalOneSize + 1)}>Bugs Eats Some Carrot</CustomButton>
           :
-          <button variant='info' disabled>No More Carrots</button>
+          <CustomButton variant='info' disabled>No More Carrots</CustomButton>
         }
         {animalTwoSize > 5 ?
-          <button variant='warning' onClick={() => setAnimalTwoSize(animalTwoSize - 1)}>Duck Season!</button>
+          <CustomButton variant='warning' onClick={() => setAnimalTwoSize(animalTwoSize - 1)}>Duck Season!</CustomButton>
           :
-          <button variant='warning' disabled>Lightin Up on Daffy</button>
+          <CustomButton variant='warning' disabled>Lightin Up on Daffy</CustomButton>
         }
       </div>
       <h2>VS</h2>
@@ -22,14 +23,14 @@ export default function Fight({ animalOneSize, setAnimalOneSize, animalTwoSize, 
         <h2>Daffy</h2>
         <img src='daffyDuck.png' height={animalTwoSize * 10 }/>
         {animalTwoSize < 20 ?
-          <button variant='info' onClick={() => setAnimalTwoSize(animalTwoSize + 1)}>Daffy Gains Fame</button>
+          <CustomButton variant='info' onClick={() => setAnimalTwoSize(animalTwoSize + 1)}>Daffy Gains Fame</CustomButton>
           :
-          <button variant='info' disabled>No More Carrots</button>
+          <CustomButton variant='info' disabled>{`Can't Get More Famous!`}</CustomButton>
         }
         {animalOneSize > 5 ?
-          <button variant='warning' onClick={() => setAnimalOneSize(animalOneSize - 1)}>Rabbit Season!</button>
+          <CustomButton variant='warning' onClick={() => setAnimalOneSize(animalOneSize - 1)}>Rabbit Season!</CustomButton>
           :
-          <button variant='warning' disabled>Lightin Up on Bugs</button>
+          <CustomButton variant='warning' disabled>Lightin Up on Bugs</CustomButton>
         }
       </div>
     </div>
