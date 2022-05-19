@@ -12,11 +12,11 @@ export default function Parade({ animals, setAnimals }) {
     <div className='paradeContainer'>
       <h2>Add to the Animal Parade</h2>
       <div className='parade-buttons'>
-        <button onClick={() => addToAnimalParade('elephant')}>🐘</button>
-        <button onClick={() => addToAnimalParade('tiger')}>🐅</button>
-        <button onClick={() => addToAnimalParade('giraffe')}>🦒</button>
-        <button onClick={() => addToAnimalParade('rhino')}>🦏</button>
-        <button onClick={() => addToAnimalParade('gorilla')}>🦍</button>
+        <button onClick={() => addToAnimalParade('elephant')}>Add Elephant 🐘</button>
+        <button onClick={() => addToAnimalParade('tiger')}>Add Tiger 🐅</button>
+        <button onClick={() => addToAnimalParade('giraffe')}>Add Giraffe 🦒</button>
+        <button onClick={() => addToAnimalParade('rhino')}>Add Rhino 🦏</button>
+        <button onClick={() => addToAnimalParade('gorilla')}>Add Gorilla 🦍</button>
       </div>
       <div className='flex-row'>
         {animals.map((animal, i) => <AnimalEmoji key={i} animal={animal}/>)}

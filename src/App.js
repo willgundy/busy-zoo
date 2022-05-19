@@ -8,7 +8,7 @@ function App() {
   const [animalOneSize, setAnimalOneSize] = useState(10);
   const [animalTwoSize, setAnimalTwoSize] = useState(10);
   const [isOpen, setIsOpen] = useState(false);
-  const [animals, setAnimals] = useState([]);
+  const [animals, setAnimals] = useState(['elephant', 'tiger', 'rhino']);
 
   return (
     <div className="App">
