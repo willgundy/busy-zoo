@@ -1,5 +1,6 @@
 import React from 'react';
 import MaterialTable from 'material-table';
+import { customers } from './data';
 
 
 export default function MyTable() {
@@ -17,7 +18,7 @@ export default function MyTable() {
           ]
         }
         title={'User Data'}
-        // data={customers}
+        data={customers}
         options={{  
           headerStyle: { 
             background: '#282c34',
