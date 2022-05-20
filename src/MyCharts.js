@@ -13,6 +13,8 @@ export default function MyCharts() {
         domainPadding={100}
         padding={{ left: 100, bottom: 60 }}
         theme={VictoryTheme.material}
+        width={1000}
+        margin={{ top: 100 }}
       >
         <VictoryBar
           horizontal
